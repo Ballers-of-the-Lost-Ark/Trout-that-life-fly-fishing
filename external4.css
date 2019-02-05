@@ -1,0 +1,651 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'zing_rust_diagonals2_demobase';
+    src: url('./product-fonts/zingrustd2demo-base-webfont.eot');
+    src: url('./product-fonts/zingrustd2demo-base-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./product-fonts/zingrustd2demo-base-webfont.woff2') format('woff2'),
+         url('./product-fonts/zingrustd2demo-base-webfont.woff') format('woff'),
+         url('./product-fonts/zingrustd2demo-base-webfont.ttf') format('truetype'),
+         url('./product-fonts/zingrustd2demo-base-webfont.svg#zing_rust_diagonals2_demobase') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+iframe{
+	width: 600px;
+	height: 350px;
+}
+
+:root{
+	--heading-font: 'zing_rust_diagonals2_demobase', sans-serif;
+	--main-font: 'Amatic SC', arial;
+	--main-color: #659dbd;
+	--secondary-color: #daad86;
+	--tertiary-color: #bd8565;
+}
+
+.wrapper{
+	max-width: 100%;
+	min-height: 100%;
+}
+
+/*Start header*/
+.header{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100%;
+	position: fixed;
+	background: #fff;
+	z-index: 2;
+}
+
+.logo{
+	margin-right: 6.5rem;
+}
+
+#logo{
+	width: 150px;
+	height: auto;
+	display: block;
+}
+
+#logo:hover{
+	cursor: pointer;
+}
+
+.nav{
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-left: 6.5rem;
+}
+
+.nav ul{
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+
+}
+
+.nav li{
+	padding-left: 2.3rem;
+}
+
+.nav a{
+	text-decoration: none;
+	font-size: 1.5rem;
+	font-family: var(--main-font);
+	color: var(--main-color);
+	padding: 2px 7px;
+	border-radius: 2px;
+	transition: all 400ms;
+}
+
+.nav a:hover{
+	color:#fff;
+	background: var(--main-color);
+	-webkit-box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.77);
+	-moz-box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.77);
+	box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.77);
+}
+
+/*Start landing image*/
+.landing{
+	background: url(./product-img/trout-extra-large.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 100vh;
+	text-align: center;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.landing-text{
+	margin-top: 2rem;
+}
+
+.landing-text h1, h3{
+	font-family: var(--heading-font);
+	color: #fff;
+	text-shadow: 4px 4px 2px rgba(94, 101, 99, 1.2);
+}
+
+.landing-text h1{
+	font-size: 5rem;
+}
+
+.landing-text h3{
+	font-size: 2.5rem;
+}
+
+
+/*Start video*/
+.video-container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 4rem;
+}
+
+.video-text{
+	font-family: var(--main-font);
+	color: var(--main-color);
+	font-size: 1.5rem;
+	text-transform: capitalize;	
+	margin-bottom: 1.6rem;
+}
+
+/*Start packages*/
+.package-text{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 4rem;
+}
+
+.package-text h2{
+	font-family: var(--main-font);
+	color: var(--main-color);
+	font-size: 2.3rem;
+	padding-bottom: 0.7rem;
+}
+
+.package-text p{
+	color: var(--main-color);
+	font-family: var(--main-font);
+	font-size: 1.3rem;
+}
+
+.packages{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	justify-items: center;
+	margin-top: 1.7rem;
+	line-height: 1.5;
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+	
+}
+
+.packages h5{
+	color: var(--tertiary-color);
+	font-family: var(--heading-font);
+	font-size: 1.85rem;
+	text-align: center;
+}
+
+.packages p{
+	font-size: 1.3rem;
+	text-align: center;
+	font-family: var(--main-font);
+}
+
+.packages ul{
+	margin-top: 0.7rem;
+}
+
+.packages li{
+	list-style: circle;
+	list-style-position: inside;
+	font-size: 1.1rem;
+	font-family: var(--main-font);
+	line-height: 1.5;
+}
+
+.package-effect:hover{
+	transition: all 400ms;
+	cursor: pointer;
+	padding: 1rem;
+	border: 2px black solid;
+	-webkit-box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.77);
+	-moz-box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.77);
+	box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.77);
+}
+
+#price1{
+	font-size: 1.5rem;
+	font-weight: 550;
+	color: #000;
+}
+
+#price2{
+	font-size: 1.5rem;
+	font-weight: 550;
+	color: #000;
+}
+
+#price3{
+	font-size: 1.5rem;
+	font-weight: 550;
+	color: #000;
+	text-shadow: 2px 2px 1px rgba(150, 150, 150, 1);
+}
+
+
+/*Start icons*/
+#icon-heading{
+	text-align: center;
+	font-family: var(--main-font);
+	color: var(--main-color);
+	font-size: 2.3rem;
+	margin-top: 4rem;
+	margin-bottom: 1rem;
+}
+.icon{
+	display: flex;
+	margin-bottom: 4rem;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.icons{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.icons img{
+	width: 85px;
+	height: auto;
+}
+
+.icon-text{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: var(--main-font);
+	font-size: 1rem;
+	margin-left: 2rem;
+}
+
+#icon-text-a{
+	margin-top: 1.1rem;
+}
+
+#icon-text-c{
+	align-self: flex-start;
+	margin-top: 1.7rem;
+}
+
+
+/*Start form*/
+.landing-form{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	background: url(./product-img/brown-trout-extra-large.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	height: 90vh;
+	width: 100%;
+}
+
+#form-text{
+	font-family: var(--main-font);
+	text-shadow: 4px 4px 2px rgba(94, 101, 99, 1.2);
+	color: #fff;
+	font-size: 2.8rem;
+	margin-bottom: 0.5rem;
+}
+
+#email-box{
+	font-size: 1.35rem;
+	padding: 0.4rem;
+	border: 3px var(--secondary-color) solid;
+	color: gray;
+}
+
+#email-box::placeholder{
+	opacity: 0.7;
+}
+
+#email-box:focus{
+	outline: none;
+}
+
+#email-box:focus::placeholder{
+	opacity: 0;
+}
+
+#submit-btn{
+	font-size: 1.7rem;
+	padding: 3px 7px;
+	margin-top: 0.5rem;
+	color:#fff;
+	border-radius: 10px;
+	cursor: pointer;
+	background: var(--main-color);
+	transition: all 400ms;
+}
+
+#submit-btn:hover{
+	-webkit-box-shadow: 6px 6px 6px 0px rgba(0,0,0,0.77);
+	-moz-box-shadow: 6px 6px 6px 0px rgba(0,0,0,0.77);
+	box-shadow: 6px 6px 6px 0px rgba(0,0,0,0.77);
+	
+}
+
+/*Start footer*/
+footer{
+	text-align: center;
+	margin: 1.2rem 0.6rem;
+}
+
+footer a{
+	text-decoration: none;
+	color: var(--main-color);
+	font-size: 1rem;
+}
+
+.credit{
+	font-size: 0.9rem;
+}
+
+/*Start media queries*/
+@media(max-width: 1025px){
+	.packages{
+		margin-top: 2.3rem;
+		grid-template-columns: 1fr;
+		grid-gap: 2rem;
+	}
+
+}
+
+/* nav bar */
+@media (max-width: 890px){
+	i{
+		cursor: pointer;
+		color: #000;
+		display: inline-block;
+		font-size: 70px;
+		position: fixed;
+		left: 0;
+		margin-left: 1.5rem;
+		margin-top: 1.5rem;
+		z-index: 3;
+	}
+
+	.header{
+		left: -1000px;
+	}
+
+	.transition-on{
+		transition-property: all;
+		transition-duration: 500ms;
+		left: 0px;
+	}
+
+	.transition-off{
+		transition-property: all;
+		transition-duration: 500ms;
+		left: -1000px;
+	}
+
+	.shrink{
+		transition: all 500ms;
+		font-size: 50px;
+		margin-top: 4.5rem;
+	}
+
+	.grow{
+		transition: all 500ms;
+		font-size: 70px;
+		margin-top: 1.5rem;
+	}
+
+	.nav li{
+		padding-left: 1rem;
+	}
+}
+
+/*iphonex, pixel 2 xl landscape*/
+@media(max-width: 824px){
+	i, .grow{
+		font-size: 40px;
+	}
+
+	.shrink{
+		font-size: 30px;
+	}
+
+	.logo{
+		margin-left: 2rem;
+	}
+
+	.nav{
+		margin-left: 0;
+	}
+	.nav li{
+		text-align: center;
+	}
+
+	.nav a{
+		font-size: 1.3rem;
+		display: inline-block;
+	}
+}
+
+/* ipad */
+@media (max-width: 769px){
+	i, .grow{
+		font-size: 75px;
+	}
+
+	.shrink{
+		font-size: 60px;
+	}
+
+	.header{
+		grid-template-columns: 1fr;
+	}
+
+	.logo{
+		margin: auto;
+	}
+
+	.nav{
+		margin: auto;
+	}
+}
+
+/*iphone plus, pixel 2 landscape*/
+@media(max-width: 736px){
+	i, .grow{
+		font-size: 40px;
+	}
+
+	.shrink{
+		font-size: 30px;
+	}
+
+	.landing-text{
+		margin-left: 1rem;
+		margin-right: 1rem;
+	}
+}
+
+/*galaxies landscape*/
+@media(max-width: 640px){
+	iframe{
+		width: 468px;
+		height: 275px;
+	}
+}
+
+/*iphone 5 landscape*/
+@media(max-width: 568px){
+	iframe{
+		width: 425px;
+		height: 250px;
+	}
+
+	.landing-text h1{
+		font-size: 3.5rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.landing-text h3{
+		font-size: 2rem;
+	}
+}
+
+/*iphone 4 landscape*/
+@media(max-width: 480px){
+	.video-text{
+		text-align: center;
+	}
+
+	.package-text p{
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+		text-align: center;
+	}
+}
+
+/*iphone plus, pixel 2, pixel 2 xl*/
+@media(max-width: 415px){
+	.shrink{
+		margin-top: 4.4em;
+		font-size: 35px;
+	}
+	.header{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.nav{
+		margin-left: 1em;
+		margin-bottom: 0.5em;
+	}
+
+	iframe{
+		width: 375px;
+		height: 200px;		
+	}
+}
+
+/*iphone x, iphone 6/7/8*/
+@media(max-width: 375px){
+	.video-text{
+		margin-bottom: 2.5rem;
+		margin-left: 0.3rem;
+		margin-right: 0.3rem;
+	}
+}
+
+/*galaxies*/
+@media(max-width: 360px){
+	.nav{
+		margin-left: 0;
+	}
+
+	iframe{
+		width: 360px;
+		height: 180px;		
+	}
+}
+
+/*iphone 4/5*/
+@media(max-width: 320px){
+	i, .grow{
+		font-size: 30px;
+	}
+
+	.shrink{
+		font-size: 25px;
+		margin-top: 7.5em;
+	}
+
+	iframe{
+		width: 320px;
+		height: 180px;		
+	}
+
+	.nav{
+		margin: auto;
+	}
+
+	.nav ul{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.nav li{
+		margin-bottom: 0.7rem;
+		padding: 0;
+	}
+
+	.landing-text h1{
+		font-size: 2.7rem;
+	}
+
+	.landing-text h3{
+		font-size: 1.8rem;
+	}
+
+	.video-text{
+		font-size: 1.35rem;
+	}
+
+	.landing-form{
+		background-attachment: scroll;
+	}
+
+	#form-text{
+		font-size: 2rem;
+		margin-bottom: 1.2rem;
+	}
+
+	#email-box{
+		font-size: 1rem;
+		margin-bottom: 0.7rem;
+	}
+
+	#submit-btn{
+		font-size: 1.4rem;
+	}
+}
+
+/*iphone 5*/
+@media(max-width: 320px) and (max-height: 568px) {
+	.landing-text{
+		margin-top: -1.7rem;
+	}
+
+	#email-box{
+		font-size: 1.1rem;
+	}
+}
+
+@media (max-height: 992px){
+	.landing{
+		background: url(./product-img/trout-large.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}
+
+@media (max-height: 600px){
+	.landing{
+		background: url(./product-img/trout-medium.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}
