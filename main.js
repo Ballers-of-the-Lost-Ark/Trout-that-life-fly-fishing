@@ -25,11 +25,14 @@ function logoClick(){
     window.open("#", "_blank");
 }
 
+var width = window.innerWidth
+|| document.documentElement.clientWidth
+|| document.body.clientWidth;
 // Animated nav slider
-if(window.screen.width < 890){
+if(width < 890){
   const menu = document.createElement('i');
   menu.className ="fas fa-bars";
-
+console.log(menu);
   const wrapper = document.querySelector('.wrapper');
   const header = document.querySelector('.header');
   wrapper.insertBefore(menu, header);
